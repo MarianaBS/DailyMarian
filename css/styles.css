@@ -4,11 +4,16 @@ body{
 }
 header{
     display: flex;
-    text-align: center;
+    align-items: center;
+    justify-content: space-around;   
 }
-nav{
+nav,footer{
     display: flex;
     background-color: black;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid tomato;
+    border-top: 2px solid tomato;
     
 }
 section{
@@ -25,20 +30,22 @@ a{
 ul.menu{
     display: flex;
     flex-direction: row;
-    margin:0;
-    list-style: none;
-    align-items: center;
     justify-content: space-between;
-   
+    margin:0;
+    padding: 0px;
+    list-style: none;
 }
 li{
-    padding: 15px;;
+    padding: 30px;
+    font-size: 20px;
+    text-transform: uppercase;
 }
 image{
     display: flex;
     position: relative;
     z-index:-1;
 }
+
 h2.ppal{
     position: absolute;
 }
@@ -49,22 +56,37 @@ ul.menu a:hover{
     color: tomato;
 }
 section.content,.side-content,.main-content{
-    
+    margin-top: 10px;
+}
+div#date-time{
+    margin-left: 0px;
+}
+div#logo{
+    display: flex;
+    justify-content:center;
+    align-items:center
 }
 #logo h1{
     margin: 10px;
     padding: 15px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    text-align: center;
+    color: black;
     letter-spacing: 10px;
-
+    
 }
 span#logo-title{
     background-color: black;
     color: white;
 }
+p#temperat{
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: -15px;
+}
 div#principal-new{
     display: flex;
+    justify-content:center;
+    align-items:center
 }
 div#second-news{
     display: flex;
@@ -92,6 +114,9 @@ div.foot1 h5,.foot1 ul,.foot2 h5,.foot2 ul{
     }
 }
  @media (max-width: 600px) {
+     nav{
+         border: hidden;
+     }
     ul.menu{
       display: none;
     }
