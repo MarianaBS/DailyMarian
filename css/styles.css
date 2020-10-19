@@ -16,8 +16,7 @@ nav,footer{
     border-bottom: 2px solid tomato;
     border-top: 2px solid tomato;
     width: 100%;
-    height: 50px;
-    
+    height: 50px;   
 }
 a{
     text-decoration: none;
@@ -48,7 +47,14 @@ h2.ppal a{
 }
 h2.ppal{
     position: absolute;
-    top: 100%;
+    top: 90%;
+    margin-left: 25px;
+    margin-right: 10px;
+    max-width: 80%;
+    font-size: xx-large;
+}
+h2.sec{
+
 }
 ul.menu li{
     text-transform: uppercase;
@@ -72,6 +78,7 @@ section.content,.side-content,.main-content,.main{
 }
 .text-right{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-top: 0px;
 }
 h3.text-right a{
     color: black;
@@ -193,9 +200,12 @@ footer p{
     color: white;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-@media (min-width: 600px) {
+@media (min-width: 768px) {
     div#menu{
       display: none;
+    }
+    div.content{
+        width: 33.33%;
     }
     img.image-text-right{
         max-width: 50%;
@@ -224,6 +234,7 @@ footer p{
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
+        width: 100%;
     }
     
     section.main-content{
@@ -240,46 +251,53 @@ footer p{
         display: none;
     }
 }
- @media (max-width: 600px) {
-     nav{
-         border: hidden;
-     }
-    ul.menu{
-      display: none;
-    }
-    div#menu{
-        align-items: flex-start;   
-    }
-    div#date-time,#weather{
-        display: none;
-    }
-    img.image-ppal,.image-sec{
-        max-width: 90%;
-    }
-    img.image-text-right{
-        max-width: 50%;
-    }
-    div#menu img{
-       max-width: 20%;
-    }  
-    section.side-content{
-        margin: 10px;
-        max-width: 90%;
-        font-size: 15px;    
-    }
-    .pies ul{
-        display: none;
-    }
-    h4.desktop{
-        display: none;
-    }
-    
-}
 @media(max-width:768px){
+    nav,footer{
+        border: hidden;
+    }
+   ul.menu{
+     display: none;
+   }
     div#menu{
         font-size: 16px;
     }
     .side-content{
         font-size: 16px;
     }
+    img.image-ppal,.image-sec{
+        max-width: 100%;
+    }
+    img.image-text-right{
+        max-width: 50%;
+    }
+    section.side-content{
+        margin: 10px;
+        max-width: 90%;
+        font-size: 15px;    
+    }
+    div#menu img{
+        max-width: 20%;
+     }  
+     .pies ul{
+        display: none;
+    }
+    h4.desktop{
+        display: none;
+    }
+   
+}
+ @media (max-width: 600px) {
+    
+    div#menu{
+        align-items: flex-start;   
+    }
+    div#date-time,#weather{
+        display: none;
+    }
+        
+    div#menu img{
+       max-width: 20%;
+    }  
+    
+    
 }
