@@ -1,6 +1,7 @@
 body{
     font-family:'Times New Roman', Times, serif;
     color: gray;
+    width: 100%;
 }
 header{
     display: flex;
@@ -14,19 +15,18 @@ nav,footer{
     justify-content: center;
     border-bottom: 2px solid tomato;
     border-top: 2px solid tomato;
+    width: 100%;
+    height: 50px;
     
 }
-section{
-
-}
-footer{
-    
-}
-
 a{
     text-decoration: none;
 }
-
+li{
+    padding: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+}
 ul.menu{
     display: flex;
     flex-direction: row;
@@ -35,19 +35,20 @@ ul.menu{
     padding: 0px;
     list-style: none;
 }
-li{
-    padding: 30px;
-    font-size: 20px;
-    text-transform: uppercase;
-}
+
 image{
     display: flex;
     position: relative;
     z-index:-1;
 }
-
+hr{
+    color: tomato;
+}
 h2.ppal{
     position: absolute;
+}
+ul.menu li{
+    text-transform: uppercase;
 }
 ul.menu a{
     color: whitesmoke;
@@ -55,9 +56,69 @@ ul.menu a{
 ul.menu a:hover{
     color: tomato;
 }
-section.content,.side-content,.main-content{
+ul.top-leidas{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+ul.top-leidas li{
+    margin-top: -25px;
+}
+section.content,.side-content,.main-content,.main{
     margin-top: 10px;
 }
+.text-right{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+h3.text-right a{
+    color: black;
+}
+p.text-right a{
+    color:  darkslategray;
+}
+h3.text-right a:hover{
+    color: gray;
+}
+p.text-right a:hover{
+    color: gray;
+}
+section.side-content{
+    background-color: black;
+    padding: 10px;
+}
+.side-content a, .side-content h3{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;  
+    color: whitesmoke;
+}
+.side-content a:hover{
+    color: tomato;
+}
+section.pies{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+.pies ul{
+    list-style: none;
+}
+.pies ul, .pies a, .pies h4{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 15px;
+    color: black;
+    line-height: 0px;
+    margin-top: 5px;
+}
+.pies a:hover{
+    color: gray;
+}
+.pies h4{
+    text-transform: uppercase;
+}
+.pies li{
+    padding: 10px;
+    margin: 0px;
+}
+
 div#date-time{
     margin-left: 0px;
 }
@@ -86,31 +147,74 @@ p#temperat{
 div#principal-new{
     display: flex;
     justify-content:center;
-    align-items:center
+    align-items: inherit;
+    width: 100%;
 }
 div#second-news{
+    position: relative;
+    display: inline;
+    margin: 0px;
+    text-align: center;
+}
+div.text-on-image{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+div.content{
     display: flex;
+    align-items: flex-start;
+    margin-top: 10px;
 }
-div#second-new1{
-    flex:1;
-}
-div#second-new2{
-    flex:1;
-}
-div.foot1,.foot2{
-    
+div.image-text-right{
+    flex: 1;
+    padding: 10px;
 }
 div.foot1 h5,.foot1 ul,.foot2 h5,.foot2 ul{
     display:flex;
     margin:0;
     list-style: none;
 }
+footer p{
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
 @media (min-width: 600px) {
     div#menu{
       display: none;
     }
     img{
-        width: 75%;
+        max-width: 75%;
+    }
+    div#second-news{
+        display: flex;
+    }
+    div#second-new1{
+        flex:1;
+        /*border-bottom: 1px solid gray;*/
+    }
+    div#second-new2{
+        flex:1;
+        /*border-bottom: 1px solid gray;*/
+    }
+    section.content,.main{
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    
+    section.main-content{
+        /*display: flex;
+        align-items: flex-start;*/
+        width: 70%
+    }
+    section.side-content{
+        /*display: flex;
+        align-items: flex-start;*/
+        width: 30%;
+    }
+    h4.mobile{
+        display: none;
     }
 }
  @media (max-width: 600px) {
@@ -121,12 +225,31 @@ div.foot1 h5,.foot1 ul,.foot2 h5,.foot2 ul{
       display: none;
     }
     div#menu{
-        align-items: flex-start
+        align-items: flex-start;   
     }
-    .image{
-        width: 100%;
+    img{
+        max-width: 50%;
     }
     div#menu img{
        max-width: 20%;
+    }  
+    section.side-content{
+        margin: 10px;
+        max-width: 90%;    
+    }
+    .pies ul{
+        display: none;
+    }
+    .pies h4{
+       
+    }
+    h4.desktop{
+        display: none;
+    }
+    
+}
+@media(max-width:768px){
+    div#menu{
+        font-size: 16px;
     }
 }
