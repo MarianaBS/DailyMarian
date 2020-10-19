@@ -41,11 +41,14 @@ image{
     position: relative;
     z-index:-1;
 }
-hr{
-    color: tomato;
+
+h2.ppal a{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: whitesmoke;
 }
 h2.ppal{
     position: absolute;
+    top: 100%;
 }
 ul.menu li{
     text-transform: uppercase;
@@ -82,16 +85,27 @@ h3.text-right a:hover{
 p.text-right a:hover{
     color: gray;
 }
-section.side-content{
+section.side-content div.side1{
     background-color: black;
+    margin-bottom: 15px;
     padding: 10px;
 }
+section.side-content div.side2{ 
+    background-color: tomato;
+    /*margin-bottom: 10px;*/
+    padding: 10px;
+    border: 1px solid black;
+}
+
 .side-content a, .side-content h3{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;  
     color: whitesmoke;
 }
-.side-content a:hover{
+.side-content div.side1 a:hover{
     color: tomato;
+}
+.side-content div.side2 a:hover{
+    color: black;
 }
 section.pies{
     display: flex;
@@ -183,8 +197,17 @@ footer p{
     div#menu{
       display: none;
     }
-    img{
-        max-width: 75%;
+    img.image-text-right{
+        max-width: 50%;
+    }
+    img.image-ppal{
+        max-width: 95%;
+        margin-bottom: 15px;
+        padding: 0px;
+    }
+    img.image-sec{
+        max-width: 90%;
+        margin-bottom: 10px;
     }
     div#second-news{
         display: flex;
@@ -227,7 +250,13 @@ footer p{
     div#menu{
         align-items: flex-start;   
     }
-    img{
+    div#date-time,#weather{
+        display: none;
+    }
+    img.image-ppal,.image-sec{
+        max-width: 90%;
+    }
+    img.image-text-right{
         max-width: 50%;
     }
     div#menu img{
@@ -235,13 +264,11 @@ footer p{
     }  
     section.side-content{
         margin: 10px;
-        max-width: 90%;    
+        max-width: 90%;
+        font-size: 15px;    
     }
     .pies ul{
         display: none;
-    }
-    .pies h4{
-       
     }
     h4.desktop{
         display: none;
@@ -250,6 +277,9 @@ footer p{
 }
 @media(max-width:768px){
     div#menu{
+        font-size: 16px;
+    }
+    .side-content{
         font-size: 16px;
     }
 }
