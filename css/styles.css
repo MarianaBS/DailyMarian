@@ -233,9 +233,18 @@ footer p{
     nav,footer{
         border: hidden;
     }
-   ul.menu{
-     display: none;
+  ul.menu{
+      display: none;
+     /*display: flex;
+     flex-direction: column;
+     align-items: center;*/
    }
+   /*div#menu{
+       display: none;
+   }*/
+    div#menu img{
+        max-width: 20%;
+    }  
     img.image-ppal,.image-sec{
         max-width: 100%;
     }
@@ -246,12 +255,7 @@ footer p{
         margin-left: 10px;
         max-width: 90%;
     }
-    div.publi{
-        display: none;
-    }
-    div#menu img{
-        max-width: 20%;
-     }  
+   
     .pies ul{
         display: none;
     }
@@ -261,15 +265,15 @@ footer p{
 }
  @media (max-width: 600px) {
     div#menu{
-        align-items: flex-start;   
+        align-items: center;   
     }
     div#date-time,#weather{
         display: none;
     }
         
-    div#menu img{
+    /*div#menu img{
        max-width: 20%;
-    }  
+    } */ 
     section.pies{
         display: flex;
         flex-direction: column;
