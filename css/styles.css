@@ -270,4 +270,7 @@ footer p{
     div#menu img{
        max-width: 20%;
     }  
+    section.pies{
+        display: flex;
+    }
 }
