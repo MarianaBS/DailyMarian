@@ -271,9 +271,6 @@ footer p{
        max-width: 20%;
     }  
     section.pies{
-        display: flex;
-    }
-    div.pies2{
         display: none;
     }
 }
