@@ -137,7 +137,14 @@ ul.top-leidas{
 }
 ul.top-leidas li{
     margin-bottom: 20px;
-    padding: 0px;
+    padding: 5px;
+}
+div.publi img{
+    margin: 10px;
+    width: auto;
+    height: auto;
+    max-width: 95%;
+    max-height: 95%;
 }
 div.content{
     display: flex;
@@ -238,6 +245,9 @@ footer p{
     section.side-content{
         margin-left: 10px;
         max-width: 90%;
+    }
+    div.publi{
+        display: none;
     }
     div#menu img{
         max-width: 20%;
