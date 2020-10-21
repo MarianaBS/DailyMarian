@@ -136,7 +136,8 @@ ul.top-leidas{
     padding: 0px;
 }
 ul.top-leidas li{
-    margin-top: -25px;
+    margin-bottom: 20px;
+    padding: 0px;
 }
 div.content{
     display: flex;
@@ -154,6 +155,7 @@ section.pies{
 }
 .pies ul{
     list-style: none;
+    padding: 0px;
 }
 .pies ul, .pies a, .pies h4{
     line-height: 0px;
