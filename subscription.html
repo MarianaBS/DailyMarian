@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" href="css/reset.css">
+    
+    <title>DailyMarian-Subscription></DailyMarian-Subscription</title>
+</head>
+<body>
+    <header>
+        <div id="date-time">
+            <p>
+                Sun, Oct 18, 2020
+            </p>
+        </div>
+        <div id="logo">
+            <h1>Daily<span id="logo-title">Marian</span></h1>
+        </div>
+        <div id="weather">
+            <p id="temperat" >
+                29°C / 84.2°F
+            </p>
+            <p>
+               Rosario
+            </p>
+        </div>
+
+    </header>
+    <nav>
+        <div id="menu">
+            <a href="#">
+                <img src="img/icono-hamburguesa.png">
+            </a>           
+        </div>
+        <ul class="menu">
+            <li>
+                <a href="#">News</a>
+            </li>
+            <li>
+                <a href="#">Sports</a>
+            </li>
+            <li>
+                <a href="#">Opinion</a>
+            </li>
+            <li>
+                <a href="#">Culture</a>
+            </li>
+            <li>
+                <a href="#">Life & Style</a>
+            </li>
+            <li>
+                <a href="#">The world</a>
+            </li>
+        </ul>
+    </nav>
+
+    <section id="subscription">
+        <h2>Form Subscription</h2>
+        <div id="subscription-in">  
+            <form>
+                <div>
+                    <div class="subscription-item">
+                        Nombre y Apellido:
+                        <input id="nombre" type="text">
+                    </div>
+                    <div class="error" id="error-nombre"></div>
+                    <div class="subscription-item">
+                        Email:
+                        <input id="email" type="text">
+                    </div>
+                    <div class="error" id="error-mail"></div>
+                </div>
+                <div>
+                    <div class="subscription-item">
+                        Contraseña: 
+                        <input id="passwd" type="text">
+                    </div>
+                    <div class="error" id="error-pass"></div>
+                    <div class="subscription-item">
+                        Edad:
+                        <input id="edad" type="number"
+                    </div>
+                    <div class="error" id="error-edad"></div>
+                </div>
+                <div class="subscription-item">
+                    Teléfono:
+                    <input id="telefono" type="number">
+                </div>
+                <div class="error" id="error-tel"></div>
+                <div class="subscription-item">
+                    Dirección:
+                    <input id="direccion" type="text">
+                </div>
+                <div class="error" id="error-dir"></div>
+                <div class="subscription-item">
+                   Ciudad: 
+                    <input id="ciudad" type="text">
+                </div>
+                <div class="error" id="error-city"></div>
+                <div class="subscription-item">
+                    Código Postal:
+                    <input id="codigopos" type="text">
+                </div>
+                <div class="error" id="error-cod"></div>
+                <div class="subscription-item">
+                   DNI:
+                    <input id="dni" type="number">
+                </div>
+                <div class="error" id="error-dni"></div>
+                <div>
+                    <input id="submit" type="submit">
+                 </div>
+
+            </form>
+        </div>
+    </section>
+    <hr>
+    <section class="pies">
+        <div class="pie1">
+         <h4 class="mobile">
+             <a href="subscription.html">
+                 Subscribe
+             </a>
+         </h4> 
+            <h4 class="desktop">Subscribe</h4>
+            <ul>
+                <li><a href="#">Why Subscribe?</a></li>
+                <li><a href="subscription.html">Subscription Form</a></li>
+                <li><a href="#">Digital Subscriptions FAQs</a></li>
+            </ul>
+        </div>
+        <div class="pie2">
+             <h4 class="mobile">
+                 <a href="#">
+                     About Us
+                 </a>
+             </h4> 
+             <h4 class="desktop">About Us</h4>
+             <ul>
+                 <li><a href="#">Advertise</a></li>
+                 <li><a href="#">Contact Us</a></li>
+                 <li><a href="#">Careers</a></li>
+             </ul>
+         </div>
+         <div class="pie3">
+             <h4 class="mobile">
+                 <a href="#">
+                     DailyMarian Products
+                 </a>
+             </h4>
+             <h4 class="desktop">DailyMarian Products</h4>
+             <ul>
+                 <li><a href="#">ePaper</a></li>
+                 <li><a href="#">eBooks</a></li>
+                 <li><a href="#">Newsletters</a></li>
+             </ul>
+         </div>
+    </section>
+    <footer>
+         <p>
+             DailyMarian - Copyright &copy; 2020
+         </p>
+    </footer>
+    <script src="js/validations.js"></script>
+ </body>
+ </html>

@@ -190,8 +190,30 @@ footer p{
     color: white;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-@media (min-width: 992px) {
-    
+#subscription{
+    border: solid 2px;
+    margin: 10px;
+    align-items: center;    
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+#subscription-in{
+    display: flex;
+    padding: 10px;
+}
+.subscription-item{
+    margin: 10px;
+}
+#subscription-in p.ok{
+    display: none;
+}
+
+#subscription-in p.error-nombre{
+   display: block;
+   color: tomato;
+}
+div.error{
+    color: tomato;
 }
 @media (min-width: 768px) {
     div#menu{
@@ -239,9 +261,6 @@ footer p{
      flex-direction: column;
      align-items: center;*/
    }
-   /*div#menu{
-       display: none;
-   }*/
     div#menu img{
         max-width: 20%;
     }  
@@ -270,13 +289,12 @@ footer p{
     div#date-time,#weather{
         display: none;
     }
-        
-    /*div#menu img{
-       max-width: 20%;
-    } */ 
     section.pies{
         display: flex;
         flex-direction: column;
+        align-items: center;
+    }
+    #subscription-in{
         align-items: center;
     }
 }
