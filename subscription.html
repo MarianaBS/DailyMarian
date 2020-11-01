@@ -61,21 +61,21 @@
         <h3>HOLA <span id="saludo"></span></h3>
         <div id="subscription-in">  
             <form>
-                <div>
+                <div class="subscription-column">
                     <div class="subscription-item">
-                        Nombre y Apellido:
+                        <label>Nombre Completo: </label> 
                         <input class="item" id="nombre" type="text">
                     </div>
                     <div class="error" id="error-nombre"></div>
                     <div class="subscription-item">
-                        Email:
+                        <label>Email: </label>
                         <input class="item"id="email" type="email">
                     </div>
                     <div class="error" id="error-mail"></div>
                 </div>
-                <div>
+                <div class="subscription-column">
                     <div class="subscription-item">
-                        Contraseña: 
+                        <label>Contraseña: </label>
                         <input class="item"id="passwd" type="password">
                     </div>
                     <div class="error" id="error-pass"></div>
@@ -85,34 +85,45 @@
                     </div>
                     <div class="error" id="error-edad"></div>
                 </div>
-                <div class="subscription-item">
-                    Teléfono:
-                    <input class="item" id="telefono" type="text">
+                <div class="subscription-column">
+                    <div class="subscription-item">
+                        <label>Teléfono:</label>
+                        <input class="item" id="telefono" type="text">
+                    </div>
+                    <div class="error" id="error-tel"></div>
+                    <div class="subscription-item">
+                        Dirección:
+                        <input class="item" id="direccion" type="text">
+                    </div>
+                    <div class="error" id="error-dir"></div>
                 </div>
-                <div class="error" id="error-tel"></div>
-                <div class="subscription-item">
-                    Dirección:
-                    <input class="item" id="direccion" type="text">
-                </div>
-                <div class="error" id="error-dir"></div>
-                <div class="subscription-item">
+                <div class="subscription-column">
+                    <div class="subscription-item">
                    Ciudad: 
                     <input class="item" id="ciudad" type="text">
+                    </div>
+                    <div class="error" id="error-city"></div>
+                    <div class="subscription-item">
+                        Código Postal:
+                        <input class="item" id="codigopos" type="text">
+                    </div>
+                    <div class="error" id="error-cod"></div>
                 </div>
-                <div class="error" id="error-city"></div>
-                <div class="subscription-item">
-                    Código Postal:
-                    <input class="item" id="codigopos" type="text">
+                <div class="subscription-column">
+                    <div class="subscription-item">
+                    <label>DNI: </label>
+                        <input class="item" id="dni" type="text">
+                    </div>
+                    <div class="error" id="error-dni"></div>
+                    <div class="subscription-item">
+                        <label>DNI: </label>
+                            <input class="item" id="dni2" type="text">
+                        </div>
+                        <div class="error" id="error-dni2"></div>
                 </div>
-                <div class="error" id="error-cod"></div>
-                <div class="subscription-item">
-                   DNI:
-                    <input class="item" id="dni" type="text">
-                </div>
-                <div class="error" id="error-dni"></div>
-                <div>
+                <div id="subscription-button">
                     <input id="submit" type="submit">
-                 </div>
+                </div>
 
             </form>
         </div>

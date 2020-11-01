@@ -193,13 +193,12 @@ footer p{
 #subscription{
     border: solid 2px;
     margin: 10px;
-    align-items: center;    
+    /*align-items: center;*/    
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
 }
-#subscription-in{
-    display: flex;
-    padding: 10px;
+section#subscription h2,h3{
+   margin-left: 5px;
 }
 .subscription-item{
     margin: 10px;
@@ -209,11 +208,32 @@ footer p{
 }
 
 #subscription-in p.error-nombre{
-   display: block;
+   display: flex;
    color: tomato;
 }
 div.error{
     color: tomato;
+    margin: 5px;
+}
+.item{
+    /*position: absolute;*/
+    margin-left: 10px;
+}
+.subscription-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.subscription-item input{
+    margin-left: 0px;
+    max-width: 70%;
+}
+div#subscription-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 5px;
 }
 @media (min-width: 768px) {
     div#menu{
@@ -250,6 +270,18 @@ div.error{
     h4.mobile{
         display: none;
     }
+    .subscription-column{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    div.subscription-item{
+        width: 50%;
+    }
+    .subscription-item input{
+        width: 70%;
+    }
+   
 }
 @media(max-width:768px){
     nav,footer{
@@ -296,5 +328,10 @@ div.error{
     }
     #subscription-in{
         align-items: center;
+    }
+    .subscription-item{
+        /*display: flex;*/
+        justify-content: space-between;
+        width: 90%;
     }
 }

@@ -137,7 +137,9 @@ function verifTel(){
     }else{
         //se fija que no tenga caracteres especiales, y q los caracteres sean solo digitos
         //En realidad con la validacion de solo digitos alcanzaria, pero como la consigna
-        // dice especificamente: validar q no se ingresen guiones, espacios o parentesis...
+        // dice especificamente: no aceptar q se ingresen guiones, espacios o parentesis...
+        //También podria haber puesto el input de tipo number y validar q no haya caract especiales,
+        //pero lo muestra con una barrita para subir y bajar el valor y no sabía cómo sacársela
         for(var i=0;i<tel.value.length;i++){
             if(tel.value[i]=="-" || tel.value[i]==" "|| tel.value[i]== "_" ||tel.value[i]=="(" ||tel.value[i]==")"){
                 bCaracterEsp=true;
@@ -163,6 +165,7 @@ dir.addEventListener("focus",limpiaDir);
 dir.addEventListener("blur",verifDir);
 
 function verifDir(){
+    //Esta está medio pobre...
     var bEspacioDir=false;
     if(dir.value.length<5){
         errDir.innerHTML="El mínimo de letras es seis";
@@ -241,6 +244,8 @@ var errores=document.querySelectorAll(".error");
 var items=document.querySelectorAll(".item");
 
 function verificarErrores(){
+    //Acá trae todo un array con los errores de los campos y si alguno no esta vacio
+    //se lo asigna como valor al campo que corresponde, para poder mostrarlo
     for (var i=0;i<errores.length;i++){
         for (var j=0; j<items.length;j++){
             if(errores[i].innerHTML!="" && i==j){
