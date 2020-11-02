@@ -199,6 +199,7 @@ footer p{
 }
 section#subscription h2,h3{
    margin-left: 5px;
+   text-align: center;
 }
 .subscription-item{
     margin: 10px;
@@ -235,6 +236,19 @@ div#subscription-button{
     width: 100%;
     margin: 5px;
 }
+input#submit{
+    background-color: black;
+    text-transform: uppercase;
+    color: whitesmoke;
+    box-shadow: 0;
+    border-radius: 5px;
+    height: 36px;
+    width: 100px;
+}
+input#submit:hover{
+    background-color: tomato;
+}
+
 @media (min-width: 768px) {
     div#menu{
         display: none;
@@ -281,7 +295,12 @@ div#subscription-button{
     .subscription-item input{
         width: 70%;
     }
-   
+    /*label{
+        min-width: 30%;
+    }
+    div.error{
+        max-width: 20%;
+    }*/
 }
 @media(max-width:768px){
     nav,footer{

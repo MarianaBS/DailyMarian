@@ -104,6 +104,22 @@ function limpiaPass(){
     errPass.innerHTML="";
 }
 
+var repPass= document.getElementById("rep-passwd");
+var errRepPass=document.getElementById("error-rep-pass");
+
+repPass.addEventListener("focus",limpiaRepPass);
+repPass.addEventListener("blur",verifRepPass);
+
+function verifRepPass(){
+    if(pass.value!=repPass.value || repPass.value.length==0 ){
+        errRepPass.innerHTML="Las contraseñas no coinciden";
+    }
+}
+
+function limpiaRepPass(){
+    errRepPass.innerHTML="";
+}
+
 var age=document.getElementById("edad");
 var errAge=document.getElementById("error-edad");
 
@@ -111,9 +127,20 @@ age.addEventListener("focus",limpiaEdad);
 age.addEventListener("blur",verifEdad);
 
 function verifEdad(){
+    var bValido=true;
     if(age.value.length<=2 && age.value.length>0){
-        if(age.value<18 ){
-            errAge.innerHTML="La edad debe ser mayor a 18";
+        for(var i=0;i<age.value.length;i++){
+            if(!esDigito(age.value[i])){
+                bValido=false;
+                break;
+            }
+        }
+        if (bValido){
+            if(age.value<18 ){
+                errAge.innerHTML="La edad debe ser mayor a 18";
+            }
+        }else{
+            errAge.innerHTML="Ingrese una edad válida";
         }
     }else{
         errAge.innerHTML="Ingrese una edad válida";
@@ -248,8 +275,12 @@ function verificarErrores(){
     //se lo asigna como valor al campo que corresponde, para poder mostrarlo
     for (var i=0;i<errores.length;i++){
         for (var j=0; j<items.length;j++){
-            if(errores[i].innerHTML!="" && i==j){
+            if(errores[i].innerHTML!=""&& i==j){
                 items[j].value=errores[i].innerHTML;
+            }
+            else if(items[j].value =="" && i==j){
+                items[j].value="El campo no puede estar vacío";
+                //errores[i].innerHTML="El campo no puede estar vacío";
             }
         }
     }   
@@ -262,7 +293,9 @@ btnEnviar.addEventListener("click",enviarDatos);
 function enviarDatos(){
    verificarErrores();
    window.alert("Nombre y Apellido: " + nom.value + "\nMail: " + mail.value +
-                "\nContraseña: " + pass.value + "\nEdad: " + age.value +
+                "\nContraseña: " + pass.value +
+                "\nRepetir Contraseña: " + repPass.value +
+                 "\nEdad: " + age.value +
                 "\nTeléfono: " + tel.value + "\nDirección: " + dir.value +
                 "\nCiudad: " + city.value + "\nCódigo Postal: " + code.value +
                 "\nDNI: " + dni.value);
