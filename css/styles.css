@@ -192,14 +192,14 @@ footer p{
 }
 #subscription{
     border: solid 2px;
-    margin: 10px;
-    /*align-items: center;*/    
+    margin: 10px;   
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-
+    background-color: whitesmoke;
 }
-section#subscription h2,h3{
+section#subscription h2,section#subscription h3{
    margin-left: 5px;
    text-align: center;
+   text-transform: uppercase;
 }
 .subscription-item{
     margin: 10px;
@@ -208,16 +208,13 @@ section#subscription h2,h3{
     display: none;
 }
 
-#subscription-in p.error-nombre{
+#subscription-in .error{
    display: flex;
    color: tomato;
-}
-div.error{
-    color: tomato;
-    margin: 5px;
+   margin: 5px;
+  
 }
 .item{
-    /*position: absolute;*/
     margin-left: 10px;
 }
 .subscription-item{
@@ -227,15 +224,16 @@ div.error{
 }
 .subscription-item input{
     margin-left: 0px;
-    max-width: 70%;
+    border: solid 1px black;
+    height: 25px;
 }
 div#subscription-button{
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
-    margin: 5px;
-}
+    margin: 5px 5px 10px 5px;
+ }
 input#submit{
     background-color: black;
     text-transform: uppercase;
@@ -295,12 +293,12 @@ input#submit:hover{
     .subscription-item input{
         width: 70%;
     }
-    /*label{
-        min-width: 30%;
+    label{
+        width: 20%;
     }
     div.error{
-        max-width: 20%;
-    }*/
+        max-width: 10%;
+    }
 }
 @media(max-width:768px){
     nav,footer{
@@ -308,9 +306,6 @@ input#submit:hover{
     }
   ul.menu{
       display: none;
-     /*display: flex;
-     flex-direction: column;
-     align-items: center;*/
    }
     div#menu img{
         max-width: 20%;
@@ -325,7 +320,6 @@ input#submit:hover{
         margin-left: 10px;
         max-width: 90%;
     }
-   
     .pies ul{
         display: none;
     }
@@ -349,7 +343,6 @@ input#submit:hover{
         align-items: center;
     }
     .subscription-item{
-        /*display: flex;*/
         justify-content: space-between;
         width: 90%;
     }
