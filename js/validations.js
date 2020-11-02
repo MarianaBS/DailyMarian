@@ -20,9 +20,13 @@ function esLetra(le){
 
 var nom=document.getElementById("nombre");
 var errNom=document.getElementById("error-nombre");
+var saludo=document.getElementById("saludo");
 
 nom.addEventListener("focus",limpiaNom);
 nom.addEventListener("blur",verifNom);
+nom.addEventListener("keydown",mostrarSaludo);
+nom.addEventListener("focus",mostrarSaludo);
+nom.addEventListener("focusout",mostrarSaludo);
 
 function verifNom(){
     var bEspacio=false;
@@ -55,6 +59,10 @@ function verifNom(){
 }
 function limpiaNom(){
     errNom.innerHTML="";
+}
+
+function mostrarSaludo(e){
+    saludo.innerHTML=e.target.value;
 }
 
 var mail=document.getElementById("email");
