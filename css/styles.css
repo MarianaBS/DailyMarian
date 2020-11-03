@@ -201,15 +201,7 @@ section#subscription h2,section#subscription h3{
    text-align: center;
    text-transform: uppercase;
 }
-.subscription-item{
-    margin: 10px;
-}
-#subscription-in p.ok{
-    display: none;
-}
-
 #subscription-in .error{
-   display: inline-flex;
    color: tomato;
    margin: 5px;
    font-weight: bold;
@@ -227,6 +219,7 @@ section#subscription h2,section#subscription h3{
     margin-left: 0px;
     border: solid 1px black;
     height: 25px;
+    margin: 10px;
 }
 div#subscription-button{
     display: flex;
@@ -246,6 +239,9 @@ input#submit{
 }
 input#submit:hover{
     background-color: tomato;
+}
+div.error{
+    display: inherit;
 }
 
 @media (min-width: 768px) {
