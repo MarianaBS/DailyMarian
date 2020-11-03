@@ -209,10 +209,10 @@ section#subscription h2,section#subscription h3{
 }
 
 #subscription-in .error{
-   display: flex;
+   display: inline-flex;
    color: tomato;
    margin: 5px;
-  
+   font-weight: bold;
 }
 .item{
     margin-left: 10px;
@@ -223,6 +223,7 @@ section#subscription h2,section#subscription h3{
     align-items: flex-start;
 }
 .subscription-item input{
+    display: flex;
     margin-left: 0px;
     border: solid 1px black;
     height: 25px;
@@ -291,10 +292,12 @@ input#submit:hover{
         width: 50%;
     }
     .subscription-item input{
+        display: flex;
         width: 70%;
     }
     label{
-        width: 20%;
+        display: flex;
+        width: 10%;
     }
     div.error{
         max-width: 10%;
@@ -326,6 +329,16 @@ input#submit:hover{
     h4.desktop{
         display: none;
     } 
+    .subscription-item input{
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 80%;
+    }
+    label{
+        display: flex;
+        width: 20%;
+    }
 }
  @media (max-width: 600px) {
     div#menu{
@@ -340,10 +353,12 @@ input#submit:hover{
         align-items: center;
     }
     #subscription-in{
-        align-items: center;
+        align-items: left;
     }
-    .subscription-item{
-        justify-content: space-between;
-        width: 90%;
+    .subscription-item input{
+        width: 70%;
+    }
+    label{
+        width: 15%;
     }
 }
