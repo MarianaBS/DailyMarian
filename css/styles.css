@@ -218,8 +218,8 @@ section#subscription h2,section#subscription h3{
     display: flex;
     margin-left: 0px;
     border: solid 1px black;
-    height: 25px;
-    margin: 10px;
+    height: 30px;
+   /* margin: 10px;*/
 }
 div#subscription-button{
     display: flex;
@@ -241,7 +241,11 @@ input#submit:hover{
     background-color: tomato;
 }
 div.error{
-    display: inherit;
+    display: inline;
+}
+.item-error{
+    display: inline;
+    margin: 10px;
 }
 
 @media (min-width: 768px) {
@@ -284,7 +288,10 @@ div.error{
         align-items: center;
         justify-content: space-around;
     }
-    div.subscription-item{
+    /*div.subscription-item{
+        width: 50%;
+    }*/
+    .item-error{
         width: 50%;
     }
     .subscription-item input{
@@ -293,10 +300,11 @@ div.error{
     }
     label{
         display: flex;
-        width: 10%;
+        width: 20%;
     }
     div.error{
-        max-width: 10%;
+        /*display: inline;*/
+        /*max-width: 10%;*/
     }
 }
 @media(max-width:768px){
@@ -330,10 +338,13 @@ div.error{
         justify-content: flex-start;
         align-items: flex-start;
         width: 80%;
+        margin: 10px;
     }
     label{
         display: flex;
-        width: 20%;
+        max-width: 10%;
+        margin: 10px 5px ;
+        
     }
 }
  @media (max-width: 600px) {
@@ -352,7 +363,7 @@ div.error{
         align-items: left;
     }
     .subscription-item input{
-        width: 70%;
+        width: 65%;
     }
     label{
         width: 15%;
